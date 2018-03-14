@@ -9,7 +9,7 @@
             <!-- Optional controls -->
             <!--<div class="swiper-pagination"></div>-->
         </swiper>
-        <audio src="../../static/like.mp3" autoplay loop="true" ref="music"></audio>
+        <audio src="../static/like.mp3" autoplay loop="true" ref="music"></audio>
         <div class="music player" @click="playSate" ref="control">
 
         </div>

@@ -6,6 +6,5 @@ let routes = require('./routesMaker').default
 Vue.use(Router)
 
 export default new Router({
-	mode: 'history',
 	routes
 })

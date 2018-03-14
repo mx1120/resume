@@ -6,10 +6,9 @@
             <swiper-slide class="inner two"></swiper-slide>
             <swiper-slide class="inner three"></swiper-slide>
             <swiper-slide class="inner four"></swiper-slide>
-            <!-- Optional controls -->
             <!--<div class="swiper-pagination"></div>-->
         </swiper>
-        <audio src="../static/likeyou.mp3" autoplay loop="true" ref="music"></audio>
+        <audio src="../assets/music/likeyou.mp3" autoplay loop="true" ref="music"></audio>
         <div class="music player" @click="playSate" ref="control">
 
         </div>

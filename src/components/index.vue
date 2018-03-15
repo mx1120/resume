@@ -6,11 +6,11 @@
             <swiper-slide class="inner two"></swiper-slide>
             <swiper-slide class="inner three"></swiper-slide>
             <swiper-slide class="inner four"></swiper-slide>
-            <!-- Optional controls -->
             <!--<div class="swiper-pagination"></div>-->
         </swiper>
-        <audio src="/static/like.mp3" autoplay loop="true" ref="music"></audio>
-        <div class="music" @click="playSate" ref="control">
+        <audio src="../assets/music/likeyou.mp3" autoplay loop="true" ref="music"></audio>
+        <div class="music player" @click="playSate" ref="control">
+
         </div>
     </div>
 </template>
@@ -38,10 +38,12 @@
 			playSate() {
 				if(!this.state) {
 					this.$refs.music.pause()
-                    this.$refs.control.style.animationPlayState = 'paused'
+                    this.$refs.control.setAttribute('class', 'music')
+//                    this.$refs.control.style.animationPlayState = 'paused'
                 }else {
 					this.$refs.music.play()
-					this.$refs.control.style.animationPlayState = 'running'
+                    this.$refs.control.setAttribute('class', 'music player')
+//					this.$refs.control.style.animationPlayState = 'running'
                 }
                 this.state = !this.state
             }
@@ -100,6 +102,8 @@
         border-radius: 50%;
         background: url("./img/music2.png");
         background-size: cover;
+    }
+    .player {
         animation: round 10s linear infinite;
         -webkit-animation:round 15s linear infinite;
         animation-play-state:running;

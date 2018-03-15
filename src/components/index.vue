@@ -9,7 +9,7 @@
             <!--<div class="swiper-pagination"></div>-->
         </swiper>
         <audio src="../assets/music/likeyou.mp3" autoplay loop="true" ref="music"></audio>
-        <div class="music player" @click="playSate" ref="control">
+        <div :class="['music', {'player' : !state}]" @click="playSate" ref="control">
 
         </div>
     </div>
@@ -38,11 +38,11 @@
 			playSate() {
 				if(!this.state) {
 					this.$refs.music.pause()
-                    this.$refs.control.setAttribute('class', 'music')
+                    /*IOS 不支持animationPlayState方法*/
 //                    this.$refs.control.style.animationPlayState = 'paused'
                 }else {
 					this.$refs.music.play()
-                    this.$refs.control.setAttribute('class', 'music player')
+                    /*IOS 不支持animationPlayState方法*/
 //					this.$refs.control.style.animationPlayState = 'running'
                 }
                 this.state = !this.state
@@ -52,7 +52,7 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-    @import "./../assets/scss/base";
+    @import "./../assets/scss/base.scss";
     .contain {
         @include clear;
         height: 100vh;

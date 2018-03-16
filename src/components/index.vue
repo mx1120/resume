@@ -12,8 +12,6 @@
             <swiper-slide class="inner four"></swiper-slide>
             <!--<div class="swiper-pagination"></div>-->
         </swiper>
-        <audio src="../assets/music/likeyou.mp3" autoplay loop="true" ref="music"></audio>
-        <div :class="['music', {'player' : !state}]" @click="playSate" ref="control"></div>
     </div>
 </template>
 
@@ -35,20 +33,6 @@
 			}
 		},
 		methods: {
-			playSate() {
-				if(!this.state) {
-					this.$refs.music.pause()
-                    /*IOS 不支持animationPlayState方法
-                    * this.$refs.control.style.animationPlayState = 'paused'
-                    * */
-                }else {
-					this.$refs.music.play()
-                    /*IOS 不支持animationPlayState方法
-                    * this.$refs.control.style.animationPlayState = 'running'
-                    * */
-                }
-                this.state = !this.state
-            },
 			detail(index) {
 				switch (index) {
                     case 0:
@@ -104,32 +88,6 @@
         background: red;
         position: fixed;
         top: 0;
-    }
-    .music {
-        width: 100px/$ppr;
-        height: 100px/$ppr;
-        position: absolute;
-        right: 40px/$ppr;
-        top: 30px/$ppr;
-        border: 1px solid black;
-        box-sizing: border-box;
-        z-index: 10;
-        border-radius: 50%;
-        background: url("../assets/img/index/music2.png");
-        background-size: cover;
-    }
-    .player {
-        animation: round 10s linear infinite;
-        -webkit-animation:round 15s linear infinite;
-        animation-play-state:running;
-    }
-    @keyframes round {
-        from {
-            transform: rotate(0deg)
-        }
-        to {
-            transform: rotate(360deg)
-        }
     }
     .march1 {
         margin-top: 20px/$ppr;

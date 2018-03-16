@@ -63,19 +63,19 @@
         width: 100%;
         height: 100vh;
         &.one {
-            background: url("./img/cat1.jpg");
+            background: url("../assets/img/index/cat1.jpg");
             background-size: cover;
         }
         &.two {
-            background: url("./img/cat2.jpg");
+            background: url("../assets/img/index/cat2.jpg");
             background-size: cover;
         }
         &.three {
-            background: url("./img/cat3.jpg");
+            background: url("../assets/img/index/cat3.jpg");
             background-size: cover;
         }
         &.four {
-            background: url("./img/cat4.jpg");
+            background: url("../assets/img/index/cat4.jpg");
             background-size: cover;
         }
     }
@@ -100,7 +100,7 @@
         top: 30px/$ppr;
         z-index: 10;
         border-radius: 50%;
-        background: url("./img/music2.png");
+        background: url("../assets/img/index/music2.png");
         background-size: cover;
     }
     .player {

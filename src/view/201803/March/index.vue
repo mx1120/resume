@@ -1,6 +1,6 @@
 <template>
     <div>
-        1111111111
+        <v-touch v-on:on:swipeleft class="wrapper">Swipe me!</v-touch>
     </div>
 </template>
 
@@ -15,5 +15,10 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-
+ @import "../../../assets/scss/base";
+    .wrapper {
+        min-height: 100vh;
+        width: 100%;
+        background: #703;
+    }
 </style>

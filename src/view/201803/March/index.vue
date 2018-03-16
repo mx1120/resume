@@ -1,6 +1,10 @@
 <template>
     <div>
-        <v-touch v-on:on:swipeleft class="wrapper">Swipe me!</v-touch>
+        <v-touch v-on:on:swipeleft class="wrapper">
+            <div class="back" @click="back">
+                BACK
+            </div>
+        </v-touch>
     </div>
 </template>
 
@@ -10,7 +14,12 @@
 			return {}
 		},
 		created() {
-		}
+		},
+        methods: {
+			back() {
+				this.$router.go(-1)
+            }
+        }
 	}
 </script>
 
@@ -20,5 +29,12 @@
         min-height: 100vh;
         width: 100%;
         background: #703;
+    }
+    .back {
+        width: 100px/$ppr;
+        height: 70px/$ppr;
+        background: #000;
+        color: white;
+        line-height: 70px/$ppr;
     }
 </style>

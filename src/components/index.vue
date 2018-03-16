@@ -35,7 +35,7 @@
 			}
 		},
 		methods: {
-			playSate: () => {
+			playSate() {
 				if(!this.state) {
 					this.$refs.music.pause()
                     /*IOS 不支持animationPlayState方法

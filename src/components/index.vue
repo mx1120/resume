@@ -2,7 +2,9 @@
     <div>
         <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback" class="contain">
             <!-- slides -->
-            <swiper-slide class="inner one"></swiper-slide>
+            <swiper-slide class="inner one">
+
+            </swiper-slide>
             <swiper-slide class="inner two"></swiper-slide>
             <swiper-slide class="inner three"></swiper-slide>
             <swiper-slide class="inner four"></swiper-slide>

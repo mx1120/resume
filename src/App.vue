@@ -37,6 +37,9 @@ export default {
 	    ...types.mapState({
 		    direction: state => state.direction
 	    })
+    },
+    destroyed() {
+  	    alert(1)
     }
 }
 </script>

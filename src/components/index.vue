@@ -20,11 +20,11 @@
 	export default {
 		data() {
 			return {
-				listName: ['三月的抉择'],
+				listName: ['三月的狮子'],
 				state:false,
 				swiperOption:{
 					direction : 'vertical',
-                    loop: true,
+//                    loop: true,
 //					pagination: {
 //						el: '.swiper-pagination',
 //                        type: 'progressbar'
